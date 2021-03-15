@@ -1,4 +1,4 @@
-let a = 10;
+let a = 9;
 if (a !=  10 ) {
     console.log('aは10ではありません。'); 
 }else {
