@@ -14,7 +14,10 @@
 </head>
 <body>
     <div id="box"></div>
-      <script src="main.js"></script>
-        //問題①：idで要素を取得して、背景色を赤色に変更する処理を記述してください。
+      <script>
+        let change = document.getElementById('box');
+　　　　　change.style.backgroundColor = '#ff0000';
+　　　　　console.log(change);
+      </script>
 </body>
 </html>
