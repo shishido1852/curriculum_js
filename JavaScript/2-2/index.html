@@ -16,9 +16,11 @@
             // ①id「p1」の要素を取得
             let change = document.getElementById('p1')
             if (change.style.display =="none") {
-                change.style.display="block";  
+                change.style.display="block"; 
+                console.log(p1); 
                 }else {
                 change.style.display="none";
+                console.log(p1); 
                 }        
             // ②取得したp1に「display:none」が無かったら、「display:none」を付与する。
             // 取得したp1に「display:none」があったら、「display:block」を付与する。
