@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text1" placeholder="入力してください">
+    <input type="button" value="追加" onclick="addText();">
+    <input type="button" value="削除" onclick="deleteText();">
+    <br>
+    <textarea id="area1" cols="50" rows="8" placeholder="ここに出力されます"></textarea>
+    
+    <script>   
+    function addText() {
+
+
+        //①入力欄のテキストを取得                
+         var UserString = document.getElementById('text1').value;
+        //②出力欄のテキストエリアを取得
+         var nowArray = document.getElementById('area1').value.split("\n");
+         nowArray.push(UserString);
+         console.log(UserString);
+
+         var resArray = [];
+         for( var i=0 ; i < nowArray.length ; i++ ) {
+         if( nowArray[i].length > 0 ) {
+         resArray.push( nowArray[i] );
+      }
+   }
+
+        var retString = "";
+        for( var i=0 ; i<resArray.length ; i++ ) {
+        retString += resArray[i] + "\n";
+        }
+
+        document.getElementById('area1').value = retString;
+        console.log(retString);
+
+}
+
+
+    function deleteText() {
+        //④出力欄のテキストを空にする
+        var textForm = document.getElementById("text1");
+  　　　 textForm.value = '';
+        //⑤入力欄のテキストを空にする
+        var areaForm = document.getElementById("area1");
+  　　　 areaForm.value = '';
+        
+    }
+    </script>
+</body>
+</html>
